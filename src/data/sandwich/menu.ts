@@ -10,7 +10,7 @@ import { SandwichType } from "./type";
 export const menu: SandwichType = {
   shrimp: 32.7,
   new_spicy_shrimp: 36.7,
-  steak_and_chees: 146.7,
+  steak_and_cheese: 146.7,
   chicken_bacon_avocado: 146.7,
   roasted_chicken: 91.7,
   rotisserie_barbecue_chicken: 118.7,
