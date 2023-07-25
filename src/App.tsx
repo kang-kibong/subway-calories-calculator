@@ -1,9 +1,12 @@
+import Header from "@components/Header";
 import BaseLayout from "@components/common/BaseLayout";
 
 function App() {
   return (
     <>
-      <BaseLayout />
+      <BaseLayout>
+        <Header></Header>
+      </BaseLayout>
     </>
   );
 }

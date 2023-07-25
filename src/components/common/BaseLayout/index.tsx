@@ -1,7 +1,12 @@
 import styled from "@emotion/styled";
+import { ReactNode } from "react";
 
-const BaseLayout = () => {
-  return <LayoutContainer></LayoutContainer>;
+interface Props {
+  children: ReactNode;
+}
+
+const BaseLayout = ({ children }: Props) => {
+  return <LayoutContainer>{children}</LayoutContainer>;
 };
 
 export default BaseLayout;
