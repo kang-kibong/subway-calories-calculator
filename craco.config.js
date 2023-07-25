@@ -1,5 +1,14 @@
+const path = require("path");
+
 module.exports = {
-	babel: {
-		preset: ['@emotion/babel-preset-css-prop'] // emotion을 사용할 수 있게 됨. 
-	}
-}
+  webpack: {
+    alias: {
+      "@components": path.resolve(__dirname, "src/components"),
+      "@assets": path.resolve(__dirname, "src/assets"),
+      "@hooks": path.resolve(__dirname, "src/hooks"),
+    },
+  },
+  babel: {
+    preset: ["@emotion/babel-preset-css-prop"], // emotion을 사용할 수 있게 됨.
+  },
+};

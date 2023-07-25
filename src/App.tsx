@@ -1,5 +1,11 @@
+import BaseLayout from "@components/common/BaseLayout";
+
 function App() {
-  return <>Hello World</>;
+  return (
+    <>
+      <BaseLayout />
+    </>
+  );
 }
 
 export default App;
