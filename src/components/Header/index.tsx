@@ -18,8 +18,8 @@ const HeaderContainer = styled.header`
   justify-content: center;
   align-items: center;
   height: 100px;
-
   background-color: #009223;
+
   & span {
     color: #ffc300;
   }
