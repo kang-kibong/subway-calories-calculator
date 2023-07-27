@@ -1,6 +1,7 @@
 import Button from "@components/common/Button";
 import styled from "@emotion/styled";
 import BannerItem from "./BannerItem";
+import { sandwich, group, morning, salad, smile, wrap } from "@assets/images/";
 
 const Banner = () => {
   const menus = [
@@ -8,37 +9,37 @@ const Banner = () => {
       id: 1,
       name: "샌드위치",
       color: "#e85a1c",
-      image: "",
+      image: sandwich,
     },
     {
       id: 2,
       name: "랩ㆍ기타",
       color: "#85c441",
-      image: "",
+      image: wrap,
     },
     {
       id: 3,
       name: "샐러드",
       color: "#0d9133",
-      image: "",
+      image: salad,
     },
     {
       id: 4,
       name: "아침메뉴",
       color: "#f2b701",
-      image: "",
+      image: morning,
     },
     {
       id: 5,
-      name: "아침메뉴",
+      name: "스마일 썹",
       color: "#00a5dd",
-      image: "",
+      image: smile,
     },
     {
       id: 6,
       name: "단체메뉴",
       color: "#fa8306",
-      image: "",
+      image: group,
     },
   ];
 
@@ -71,4 +72,8 @@ const Description = styled.span`
   font-weight: 700;
 `;
 
-const MenuContainer = styled.div``;
+const MenuContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+`;
