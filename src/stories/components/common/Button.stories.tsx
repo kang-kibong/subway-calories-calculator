@@ -6,5 +6,5 @@ export default {
 };
 
 export const Default = (args: any) => {
-  return <Button {...args} />;
+  return <Button {...args}>확인</Button>;
 };

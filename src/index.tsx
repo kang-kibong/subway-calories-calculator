@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import GlobalThemeProvider from "./assets/styles/GlobalThemeProvider";
+import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -9,8 +10,10 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <GlobalThemeProvider>
-      <App />
-    </GlobalThemeProvider>
+    <BrowserRouter>
+      <GlobalThemeProvider>
+        <App />
+      </GlobalThemeProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );

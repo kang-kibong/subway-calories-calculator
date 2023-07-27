@@ -3,15 +3,21 @@ import { ReactNode } from "react";
 
 interface Props {
   children: ReactNode;
+  onClick?(): void;
 }
 
-const Button = ({ children, ...props }: Props) => {
-  return <ButtonContainer>{children}</ButtonContainer>;
+const Button = ({ children, onClick, ...props }: Props) => {
+  return (
+    <ButtonContainer onClick={onClick} {...props}>
+      {children}
+    </ButtonContainer>
+  );
 };
 
 export default Button;
 
 const ButtonContainer = styled.button`
+  border: none;
   width: 100%;
   color: #fff;
   background-color: #ffc300;
