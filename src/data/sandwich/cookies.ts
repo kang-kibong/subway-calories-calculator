@@ -1,6 +1,13 @@
+import {
+  double_chocolate_chip,
+  chocolate_chip,
+  oatmeal_raisin,
+  raspberry_cheese_cake,
+  white_choco_macadamia,
+} from '@assets/images/sandwiches/cookies'
 import { IContent } from '../type'
 
-export const cookies: IContent[] = [
+const cookies: IContent[] = [
   {
     id: 1,
     name: '더블 초코칩',
@@ -37,3 +44,5 @@ export const cookies: IContent[] = [
     calories: 245,
   },
 ]
+
+export default cookies

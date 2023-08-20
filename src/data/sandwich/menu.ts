@@ -20,7 +20,7 @@ import {
 } from '@assets/images/sandwiches/menu/index'
 import { IContent } from '../type'
 
-export const menu: IContent[] = [
+const menu: IContent[] = [
   {
     id: 1,
     name: 'New 쉬림프',
@@ -148,3 +148,5 @@ export const menu: IContent[] = [
     calories: 0,
   },
 ]
+
+export default menu
