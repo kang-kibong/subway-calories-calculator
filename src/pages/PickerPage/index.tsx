@@ -1,42 +1,42 @@
-import { useState } from "react";
+import { useState } from 'react'
 
-import styled from "@emotion/styled";
+import styled from '@emotion/styled'
 
-import { Page } from "@/data/sandwichPage";
+import Banner from '@components/Banner'
+import Picker from '@components/Picker'
+import Button from '@components/common/Button'
 
-import Banner from "@components/Banner";
-import Picker from "@components/Picker";
-import Button from "@components/common/Button";
+import { IPage } from '@/data/type'
 
 interface Props {
-  pages: Page[];
+  pages: IPage[]
 }
 
 const PickerPage = ({ pages, ...props }: Props) => {
-  const [pageId, setPageId] = useState(1);
+  const [pageId, setPageId] = useState(1)
 
   const handleDecreasePageId = () => {
-    if (pageId === 1) return;
-    setPageId(pageId - 1);
-  };
+    if (pageId === 1) return
+    setPageId(pageId - 1)
+  }
 
   const handleIncreasePageId = () => {
-    if (pageId === pages[pages.length - 1].id) return;
-    setPageId(pageId + 1);
-  };
+    if (pageId === pages[pages.length - 1].id) return
+    setPageId(pageId + 1)
+  }
 
   return (
     <>
       <Banner>
         {pages.map(
-          (page) =>
+          page =>
             page.id === pageId && (
               <Picker
                 key={page.id}
                 id={page.id}
                 title={page.title}
-                images={page.images}
                 description={page.description}
+                contents={page.contents}
               />
             )
         )}
@@ -46,10 +46,10 @@ const PickerPage = ({ pages, ...props }: Props) => {
         <Button onClick={handleIncreasePageId}>다음</Button>
       </ButtonContainer>
     </>
-  );
-};
+  )
+}
 
-export default PickerPage;
+export default PickerPage
 
 const ButtonContainer = styled.div`
   margin-top: 20px;
@@ -64,6 +64,5 @@ const ButtonContainer = styled.div`
 
   & button:last-of-type {
     margin-right: 0;
-    
   }
-`;
+`

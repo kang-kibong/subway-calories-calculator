@@ -1,20 +1,17 @@
-import styled from "@emotion/styled";
+import { IContent } from '@/data/type'
+import styled from '@emotion/styled'
 
-interface Props {
-  image: string;
-}
-
-const PickerItem = ({ image, ...props }: Props) => {
+const PickerItem = ({ id, name, image, alt, calories, ...props }: IContent) => {
   return (
     <ItemContainer {...props}>
       <ImageContainer>
         <img src={image} alt={image} />
       </ImageContainer>
     </ItemContainer>
-  );
-};
+  )
+}
 
-export default PickerItem;
+export default PickerItem
 
 const ItemContainer = styled.div`
   cursor: pointer;
@@ -39,7 +36,7 @@ const ItemContainer = styled.div`
   &:hover {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   }
-`;
+`
 
 const ImageContainer = styled.div`
   width: 200px;
@@ -49,4 +46,4 @@ const ImageContainer = styled.div`
     width: 100%;
     -webkit-user-drag: none;
   }
-`;
+`

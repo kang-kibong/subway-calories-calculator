@@ -1,35 +1,28 @@
-import styled from "@emotion/styled";
-import { Link } from "react-router-dom";
-
-// 이미지 타입을 어떻게 정해야 하는지?
-
-interface Menu {
-  id: number;
-  name: string;
-  color: string;
-  image: string;
-}
+import styled from '@emotion/styled'
+import { ICategory } from '@/data/type'
+import { Link } from 'react-router-dom'
 
 interface Props {
-  menu: Menu;
-  onSelect(select: string): void;
+  category: ICategory
+  onSelect(select: string): void
 }
 
-const Category = ({ onSelect, menu, ...props }: Props) => {
-  const { name, color, image } = menu;
+const Category = ({ onSelect, category, ...props }: Props) => {
+  const { name, alt, color, image } = category
+  
   return (
     <ItemContainer color={color} {...props}>
-      <Link to="/picked" onClick={() => onSelect(name)}>
+      <Link to="/picked" onClick={() => onSelect(alt)}>
         <ImageContainer>
           <img src={image} alt="sandwich" />
         </ImageContainer>
         <strong>{name}</strong>
       </Link>
     </ItemContainer>
-  );
-};
+  )
+}
 
-export default Category;
+export default Category
 
 const ItemContainer = styled.div<{ color: string }>`
   cursor: pointer;
@@ -54,7 +47,7 @@ const ItemContainer = styled.div<{ color: string }>`
   &:hover {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   }
-`;
+`
 
 const ImageContainer = styled.div`
   width: 200px;
@@ -64,4 +57,4 @@ const ImageContainer = styled.div`
     width: 100%;
     -webkit-user-drag: none;
   }
-`;
+`

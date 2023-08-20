@@ -1,24 +1,26 @@
-import { useEffect, useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { useState } from 'react'
+import { Route, Routes } from 'react-router-dom'
 
-import BaseLayout from "@components/common/BaseLayout";
-import Container from "@components/common/Container";
+import BaseLayout from '@components/common/BaseLayout'
+import Container from '@components/common/Container'
 
-import { Page, sandwichPage } from "./data/sandwichPage";
+import { sandwichPage } from './data/sandwichPage'
 
-import PickerPage from "@pages/PickerPage";
-import MainPage from "@pages/MainPage";
+import PickerPage from '@pages/PickerPage'
+import MainPage from '@pages/MainPage'
+
+import { IPage } from './data/type'
 
 interface Pages {
-  [key: string]: Page[];
+  [key: string]: IPage[]
 }
 
-const page: Pages = {
-  샌드위치: sandwichPage as Page[],
-};
+const pages: Pages = {
+  sandwich: sandwichPage as IPage[],
+}
 
 function App() {
-  const [select, setSelect] = useState("");
+  const [select, setSelect] = useState('')
 
   return (
     <>
@@ -27,17 +29,17 @@ function App() {
           <Routes>
             <Route
               path="/"
-              element={<MainPage onSelect={(select) => setSelect(select)} />}
+              element={<MainPage onSelect={select => setSelect(select)} />}
             />
             <Route
               path="/picked"
-              element={<PickerPage pages={page[select]} />}
+              element={<PickerPage pages={pages[select]} />}
             />
           </Routes>
         </Container>
       </BaseLayout>
     </>
-  );
+  )
 }
 
-export default App;
+export default App

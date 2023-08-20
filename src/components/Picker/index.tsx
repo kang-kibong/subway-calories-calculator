@@ -1,19 +1,19 @@
-import { Page } from "@/data/sandwichPage";
-import PickerItem from "./PickerItem";
+import PickerItem from './PickerItem'
 
-import styled from "@emotion/styled";
-import { v4 } from "uuid";
+import styled from '@emotion/styled'
+import { IPage } from '@/data/type'
+import { v4 } from 'uuid'
 
-interface Props extends Page {
-  onSelect?(select: string): void;
+interface Props extends IPage {
+  onSelect?(select: string): void
 }
 
 const Picker = ({
   onSelect,
   id,
   title,
-  images,
   description,
+  contents,
   ...props
 }: Props) => {
   return (
@@ -21,29 +21,36 @@ const Picker = ({
       <Title>{title}</Title>
       <Description>{description}</Description>
       <PickContainer>
-        {images.map((image) => (
-          <PickerItem key={v4()} image={image} />
+        {contents.map(content => (
+          <PickerItem
+            key={content.id}
+            id={content.id}
+            name={content.name}
+            image={content.image}
+            alt={content.alt}
+            calories={content.calories}
+          />
         ))}
       </PickContainer>
     </PickerContainer>
-  );
-};
+  )
+}
 
-export default Picker;
+export default Picker
 
-const PickerContainer = styled.div``;
+const PickerContainer = styled.div``
 
 const Title = styled.h1`
   font-size: 24px;
   margin-bottom: 24px;
-`;
+`
 
 const Description = styled.span`
   display: block;
   margin-bottom: 12px;
   font-size: 18px;
   font-weight: 700;
-`;
+`
 
 const PickContainer = styled.div`
   box-sizing: border-box;
@@ -53,4 +60,4 @@ const PickContainer = styled.div`
   justify-content: space-around;
   align-items: center;
   overflow: auto;
-`;
+`
