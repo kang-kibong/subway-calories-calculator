@@ -1,4 +1,4 @@
-import { Menu, Bread, Cookies, Sauce, Cheese } from '../sandwich'
+import { Menu, Bread, Cookies, Sauce, Cheese, Vegetable } from '../sandwich'
 import { IPage } from '../type'
 
 export const sandwichPage: IPage[] = [
@@ -24,7 +24,7 @@ export const sandwichPage: IPage[] = [
     id: 4,
     title: '야채',
     description: '야채를 선택하세요.',
-    contents: [],
+    contents: Vegetable,
   },
   {
     id: 5,

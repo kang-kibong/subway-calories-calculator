@@ -1,7 +1,17 @@
-// import images
+import {
+  avocado,
+  cucumbers,
+  jalapenos,
+  lettuce,
+  olives,
+  peppers,
+  pickles,
+  red_onions,
+  tomatoes,
+} from '@assets/images/sandwiches/vegetable'
 import { IContent } from '../type'
 
-export const vegetable: IContent[] = [
+const vegetable: IContent[] = [
   {
     id: 1,
     name: '양상추',
@@ -66,3 +76,5 @@ export const vegetable: IContent[] = [
     calories: 56.5,
   },
 ]
+
+export default vegetable
