@@ -1,7 +1,14 @@
-// import images
+import {
+  flat_bread,
+  hearty_italian,
+  honey_oat,
+  parmesan_oregano,
+  wheat,
+  white,
+} from '@assets/images/sandwiches/bread'
 import { IContent } from '../type'
 
-export const bread: IContent = [
+export const bread: IContent[] = [
   {
     id: 1,
     name: '허니 오트',
