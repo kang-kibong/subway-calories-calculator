@@ -1,4 +1,4 @@
-import { css } from "@emotion/react";
+import { css } from '@emotion/react'
 /* http://meyerweb.com/eric/tools/css/reset/
   v2.0 | 20110126
   License: none (public domain)
@@ -6,7 +6,7 @@ import { css } from "@emotion/react";
 
 const GlobalStyle = css`
   body {
-    font-family: "Pretendard", sans-serif;
+    font-family: 'Pretendard', sans-serif;
     padding: 0 !important;
     background-color: #e2e2e8;
   }
@@ -137,7 +137,7 @@ const GlobalStyle = css`
   blockquote:after,
   q:before,
   q:after {
-    content: "";
+    content: '';
     content: none;
   }
   table {
@@ -152,6 +152,6 @@ const GlobalStyle = css`
   button:focus {
     outline: none;
   }
-`;
+`
 
-export default GlobalStyle;
+export default GlobalStyle

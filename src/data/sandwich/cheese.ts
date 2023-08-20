@@ -22,7 +22,7 @@ const cheese: IContent[] = [
     calories: 53.6,
   },
   {
-    id: 2,
+    id: 3,
     name: '모짜렐라 치즈',
     image: mozzarella_cheese,
     alt: 'mozzarella cheese',

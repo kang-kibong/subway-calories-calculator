@@ -5,7 +5,9 @@ const PickerItem = ({ id, name, image, alt, calories, ...props }: IContent) => {
   return (
     <ItemContainer {...props}>
       <ImageContainer>
-        <img src={image} alt={image} />
+        <img src={image} alt={alt} />
+        <Title>{name}</Title>
+        <Calories>{calories} Kcal</Calories>
       </ImageContainer>
     </ItemContainer>
   )
@@ -19,8 +21,8 @@ const ItemContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 250px;
-  width: 43.5%;
+  height: 450px;
+  width: 42.5%;
   margin: 14px;
   background-color: ${({ color }) => color};
   border-radius: 14px;
@@ -46,4 +48,14 @@ const ImageContainer = styled.div`
     width: 100%;
     -webkit-user-drag: none;
   }
+`
+
+const Title = styled.h1`
+  margin-bottom: 12px;
+  color: #686868; 
+`
+
+const Calories = styled.strong`
+  font-size: 14px;
+  color: #009223;
 `

@@ -38,10 +38,4 @@ export const sandwichPage: IPage[] = [
     description: '쿠키를 선택하세요.',
     contents: Cookies,
   },
-  {
-    id: 7,
-    title: '음료',
-    description: '음료를 선택하세요.',
-    contents: [],
-  },
 ]

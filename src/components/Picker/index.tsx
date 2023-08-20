@@ -2,7 +2,6 @@ import PickerItem from './PickerItem'
 
 import styled from '@emotion/styled'
 import { IPage } from '@/data/type'
-import { v4 } from 'uuid'
 
 interface Props extends IPage {
   onSelect?(select: string): void
@@ -54,10 +53,10 @@ const Description = styled.span`
 
 const PickContainer = styled.div`
   box-sizing: border-box;
-  height: 700px;
   display: flex;
+  height: 100dvh;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  overflow: auto;
+  overflow: scroll;
 `

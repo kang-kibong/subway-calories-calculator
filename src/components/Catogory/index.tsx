@@ -30,7 +30,7 @@ const ItemContainer = styled.div<{ color: string }>`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 250px;
+  height: 450px;
   width: 43.5%;
   margin: 14px;
   background-color: ${({ color }) => color};

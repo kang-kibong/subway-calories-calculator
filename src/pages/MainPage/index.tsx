@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import Banner from '@components/Banner'
 
 import Category from '@components/Catogory'
-import { categories } from '@/data/categories'
+import { categories } from '@data/categories'
 
 interface Props {
   onSelect(select: string): void
