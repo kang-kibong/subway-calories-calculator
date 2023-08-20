@@ -1,7 +1,22 @@
-// import { SandwichType } from '../type'
+import {
+  black_pepper,
+  honey_mustard,
+  horseradish,
+  hot_chilli,
+  mayonnaise,
+  olive_oil,
+  ranch,
+  red_wine_vinaigrette,
+  salt,
+  smoke_bbq,
+  southwest_chipotle,
+  sweet_chilli,
+  sweet_onion,
+  yellow_mustard,
+} from '@assets/images/sandwiches/sauce'
 import { IContent } from '../type'
 
-export const sauce: IContent[] = [
+const sauce: IContent[] = [
   {
     id: 1,
     name: '랜치',
@@ -101,3 +116,5 @@ export const sauce: IContent[] = [
     calories: 0,
   },
 ]
+
+export default sauce

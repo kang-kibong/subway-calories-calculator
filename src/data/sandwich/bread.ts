@@ -8,7 +8,7 @@ import {
 } from '@assets/images/sandwiches/bread'
 import { IContent } from '../type'
 
-export const bread: IContent[] = [
+const bread: IContent[] = [
   {
     id: 1,
     name: '허니 오트',
@@ -52,3 +52,5 @@ export const bread: IContent[] = [
     calories: 467,
   },
 ]
+
+export default bread
