@@ -1,7 +1,12 @@
-// import images
+import {
+  american_cheese,
+  mozzarella_cheese,
+  shredded_cheese,
+} from '@assets/images/sandwiches/cheese'
+
 import { IContent } from '../type'
 
-export const cheese: IContent[] = [
+const cheese: IContent[] = [
   {
     id: 1,
     name: '아메리칸 치즈',
@@ -24,3 +29,5 @@ export const cheese: IContent[] = [
     calories: 43.8,
   },
 ]
+
+export default cheese
