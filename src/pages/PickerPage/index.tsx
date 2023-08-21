@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
 
 import Banner from '@components/Banner'
 import Picker from '@components/Picker'
-import Button from '@components/common/Button'
+import ButtonContainer from '@components/Picker/ButtonContainer'
 
 import { IPage } from '@/data/type'
 
@@ -41,28 +41,12 @@ const PickerPage = ({ pages, ...props }: Props) => {
             )
         )}
       </Banner>
-      <ButtonContainer>
-        <Button onClick={handleDecreasePageId}>이전</Button>
-        <Button onClick={handleIncreasePageId}>다음</Button>
-      </ButtonContainer>
+      <ButtonContainer
+        onDecreasePageId={handleDecreasePageId}
+        onIncreasePageId={handleIncreasePageId}
+      />
     </>
   )
 }
 
 export default PickerPage
-
-const ButtonContainer = styled.div`
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  & button {
-    width: 175px;
-    margin-right: 20px;
-  }
-
-  & button:last-of-type {
-    margin-right: 0;
-  }
-`
